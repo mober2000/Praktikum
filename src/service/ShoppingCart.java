@@ -1,20 +1,17 @@
 package service;
 
 
-import model.Meat;
+import model.Food;
 
 public class ShoppingCart {
 
-    String[] food = new String[3];
-    public ShoppingCart(){
-
+    Food[] food = new Food[3];
+    public ShoppingCart(String[] food){
     }
 
-    public void getSumGoods(){
-        for (int i = 0; i < food.length; i++){
-            food[i] = "dd";
+    public void getSumGoodsNotDiscount(){
+        for (int i = 0; i < 3; i++){
+
         }
-
-
     }
 }

@@ -1,10 +1,16 @@
 package model;
 
-public class Meat extends Food{
+import static model.constants.Discount.discountMeat;
 
-    public Meat(int amount, double price,boolean isVegetarian){
-        this.amount = amount;
-        this.price = price;
-        this.isVegetarian = isVegetarian;
+public class Meat extends Food implements Discountable{
+
+    public Meat(int amount, double price){
+        super(amount, price);
+        setIsVegetarian(false);
+    }
+
+    @Override
+    public double getDiscount() {
+        return discountMeat;
     }
 }
